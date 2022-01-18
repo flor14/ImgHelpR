@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2022 ImgHelpR authors
+Copyright (c) 2022 Sufang Tan, Jasmine Ortega, Ho Kwan Lio, Maeve Shi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
