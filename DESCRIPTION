@@ -1,15 +1,29 @@
 Package: ImgHelpR
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Tools to Help Process Image in R
+Version: 0.1.0
 Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    c(person(given = "Sufang",
+             family = "Tan",
+             role = "aut"),
+      person(given = "Jasmine",
+             family = "Ortega",
+             role = "aut"),
+      person(given = "Ho Kwan",
+             family = "Lio",
+             role = "aut"),
+      person(given = "Maeve",
+             family = "Shi",
+             role = c("aut", "cre"),
+             email = "first.last@example.com",
+             comment = c(ORCID = "YOUR-ORCID-ID")))
+Description: ImgHelp is a simple R library to help users crop, rotate, compress, or change the color scale of a given image. It contains four functions: Crop(), ImgRotate(), ColorConv() and ImgCompress() and is designed to be a beginner-friendly image processing tool.
+License: MIT + file LICENSE
+URL: https://github.com/UBC-MDS/ImgHelpR
+BugReports: https://github.com/UBC-MDS/ImgHelpR/issues
+Depends:
+	R (>= 3.0.2)
+Imports:
+	jpeg (>= 0.1.9)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
