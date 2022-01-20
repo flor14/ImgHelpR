@@ -6,56 +6,51 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of ImgHelpR is to …
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of ImgHelpR is a simple R package to help users crop, rotate, compress, or change the color scale of a given image. It contains four functions: `Crop()`, `ImgRotate()`, `ColorConv()` and `ImgCompress()` and is designed to be a beginner-friendly image processing tool. 
 
 ## Installation
 
-You can install the released version of ImgHelpR from
-[CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("ImgHelpR")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
-
-``` r
-# install.packages("devtools")
-devtools::install_github("UBC-MDS/ImgHelpR")
 ```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
+## Usage
+```{r example}
 library(ImgHelpR)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+## Features
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
+- `Crop(img, width, height)` This function takes an image and the desired height/width as input, and returns a cropped image. The image size is cropped by removing the edge pixels until the input size is reached. 
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/master/examples>.
+- `ImgRotate(img, degree)` This function rotates an image either 90, 180, 270, or 360 degrees from it's original orientation. The image is rotated by pivoting the array of pixels by the desired degree. 
 
-You can also embed plots, for example:
+- `ColorConv(img, color)` This function converts an image to a color specified by user-input. The image is converted by changing the pixel values of the image's array. 
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+- `ImgCompress(img, method, level=1)` This function compresses an image to a user-defined compression level. The compression methods supported by this function are single value decomposition (SVD) and simple image resize. Additionally, users can select the compression levels desired (highest compression level = 1,  lowest compression level = 2).
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+## R Ecosystem
+
+There is one major image processing library already present in the R ecosystem. 
+- Magick: Open source image processing package for R based on the comprehensive ImageMagick STL. The functions in this library are very comprehensive and support a wide range of inputs, from JPEG to PDFs. Functionalities of Magick are vectorized, allowing for quick image distortion. Magick covers most image processing needs for R, from simple blurring to drawing and multi-frame graphics. 
+
+The aim for ImgHelpR is not to replace the Magick -- no need to reinvent the wheel! The intention for ImgHelp is to be a beginner-friendly R library for basic image manipulation. A simple tool to use when all you need to do is rotate, crop, compress, or convert the colors of an image.
+
+
+## Contributors
+
+The following people contributed to the creation of ImgHelp:
+- Sufang Tan [@Kendy-Tan](https://github.com/Kendy-Tan)
+- Jasmine Ortega [@JasmineOrtega](https://github.com/jasmineortega)
+- Ho Kwan Lio [@stevenlio88](https://github.com/stevenlio88)
+- Maeve Shi [@MaeveShi](https://github.com/MaeveShi)
+
+## License
+
+`ImgHelp` was created by Sufang Tan, Jasmine Ortega, Ho Kwan Lio, Maeve Shi. It is licensed under the terms of the MIT license.
+
