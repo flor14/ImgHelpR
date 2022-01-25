@@ -30,5 +30,7 @@ Resize:
 Resize image to different size using interval pixel selection method.
 }
 \examples{
+img <- array(runif(1000),dim=c(10,10,3))
 ImgCompress(img, method="resize", level=1)
+
 }
