@@ -47,7 +47,7 @@ ImgCompress <- function(img, method, level=1){
 
     for (c in 1:dim(img)[3]) {
       img_svd <- svd(img[,,c])
-      x <- floor(length(img_svd$d)*max(level_scale[level],1))
+      x <- max(floor(length(img_svd$d)*level_scale[level]), 2)
       img_comp[,,c] <- img_svd$u[,1:x] %*% diag(img_svd$d[1:x]) %*% t(img_svd$v[,1:x])
       img_comp[,,c] <- ifelse(img_comp[,,c] > 1,1,ifelse(img_comp[,,c] < 0,0,img_comp[,,c]))
     }
