@@ -28,7 +28,10 @@ Imports:
     assertthat,
     here,
     rprojroot,
-    testthat
+    testthat,
+    OpenImageR,
+    numbers,
+    png
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
