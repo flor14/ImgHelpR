@@ -28,7 +28,7 @@ ImgCompress <- function(img, method, level=1){
   if (!is.array(img)) {
     stop("Check input image type, should be an array type. Use jpeg::readJPEG('image.jpeg').")
   }
-  if (nrow(img) <= 0 | ncol(img) <= 0) {
+  if (nrow(img) <= 2 | ncol(img) <= 2) {
     stop("Invalid input image size.")
   }
   if (!(tolower(method) %in% c("svd","resize"))) {
