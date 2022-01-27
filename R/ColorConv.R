@@ -28,28 +28,28 @@ ColorConv <- function(img, color){
   }
 
   if (tolower(color)=="gray"){
-    conv_img = mean(as.matrix(img))
+    conv_img <- mean(as.matrix(img))
     
     return(conv_img)
   
   } else if (tolower(color)=="red"){
-    conv_img = img.clone()
-    conv_img[,,1] = conv_img[,,1] * 0
-    conv_img[,,2] = conv_img[,,2] * 0
+    conv_img <- img
+    conv_img[,,2] <- conv_img[,,2] * 0
+    conv_img[,,3] <- conv_img[,,3] * 0
 
     return(conv_img)
   
   } else if (tolower(color)=="green") {
-    conv_img = img.clone()
-    conv_img[,,0] = conv_img[,,0] * 0
-    conv_img[,,2] = conv_img[,,2] * 0
+    conv_img <- img
+    conv_img[,,1] <- conv_img[,,1] * 0
+    conv_img[,,3] <- conv_img[,,3] * 0
     
     return(conv_img)
   
   } else if (tolower(color)=="blue") {
-    conv_img = img.clone()
-    conv_img[,,0] = conv_img[,,0] * 0
-    conv_img[,,1] = conv_img[,,1] * 0
+    conv_img <- img
+    conv_img[,,1] <- conv_img[,,1] * 0
+    conv_img[,,2] <- conv_img[,,2] * 0
     
     return(conv_img)
   }
