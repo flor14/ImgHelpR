@@ -28,7 +28,7 @@ ImgCompress <- function(img, method, level=1){
   if (!is.array(img)) {
     stop("Check input image type, should be an array type. Use jpeg::readJPEG('image.jpeg').")
   }
-  if (nrow(img) <= 0 | ncol(img) <= 0) {
+  if (nrow(img) <= 2 | ncol(img) <= 2) {
     stop("Invalid input image size.")
   }
   if (!(tolower(method) %in% c("svd","resize"))) {
@@ -47,7 +47,7 @@ ImgCompress <- function(img, method, level=1){
 
     for (c in 1:dim(img)[3]) {
       img_svd <- svd(img[,,c])
-      x <- floor(length(img_svd$d)*max(level_scale[level],1))
+      x <- max(floor(length(img_svd$d)*level_scale[level]), 2)
       img_comp[,,c] <- img_svd$u[,1:x] %*% diag(img_svd$d[1:x]) %*% t(img_svd$v[,1:x])
       img_comp[,,c] <- ifelse(img_comp[,,c] > 1,1,ifelse(img_comp[,,c] < 0,0,img_comp[,,c]))
     }

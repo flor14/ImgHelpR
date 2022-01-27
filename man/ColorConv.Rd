@@ -20,4 +20,5 @@ This function converts an image to one of the color : gray, red, green, blue
 \examples{
 img <- array(runif(1000),dim=c(10,10,3))
 ColorConv(img, color = 'gray')
+
 }
