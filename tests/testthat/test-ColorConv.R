@@ -15,7 +15,7 @@ test_that("Error should be thrown when input color is not expected", {
 })
 
 test_that("Validate function red color output is correct", {
-  expect_equal(ColorConv(array(1000,dim=c(10,10,3)),color ="red")[,,1], array(0,dim=c(10,10,1)))
-  expect_equal(ColorConv(array(1000,dim=c(10,10,3)),color ="red")[,,2], array(0,dim=c(10,10,1)))
+  expect_equal(ColorConv(array(1000,dim=c(10,10,3)),color ="red")[,,2], array(0,dim=c(10,10)))
+  expect_equal(ColorConv(array(1000,dim=c(10,10,3)),color ="red")[,,3], array(0,dim=c(10,10)))
 })
 
