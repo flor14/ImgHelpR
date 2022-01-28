@@ -19,7 +19,6 @@ library(devtools)
 install_github("UBC-MDS/ImgHelpR")
 ```
 
-```
 ## Usage
 ```{r example}
 library(ImgHelpR)
