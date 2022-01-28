@@ -15,8 +15,8 @@ The goal of ImgHelpR is a simple R package to help users crop, rotate, compress,
 
 
 ``` r
-> library(devtools)
-> install_github("UBC-MDS/ImgHelpR")
+library(devtools)
+install_github("UBC-MDS/ImgHelpR")
 ```
 
 ```
