@@ -3,11 +3,11 @@ library(jpeg)
 #' 
 #' Crop image to desired size
 #'
-#' @param img 
+#' @param img ----Array, input image array
 #' @param height ----Int, height of the desired image
 #' @param width ----Int, width of the desired image
 #'
-#' @return
+#' @return The cropped image
 #' @export
 #'
 #' @examples
