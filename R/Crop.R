@@ -31,7 +31,7 @@ Crop <- function(img, height, width){
   new_height = dim(img)[1] - height
   new_width = dim(img)[2] - width
   
-  if(mod(new_height, 2) == 0){
+  if(new_height %% 2 == 0){
     start_row = as.integer(new_height/2) + 1
     end_row = start_row + height - 1
   }
@@ -40,7 +40,7 @@ Crop <- function(img, height, width){
     end_row = start_row + height -1
   }
   
-  if(mod(new_width, 2) == 0){
+  if(new_width %% 2 == 0){
     start_col = as.integer(new_width/2) + 1
     end_col = start_col + width - 1
   }
