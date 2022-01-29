@@ -2,19 +2,24 @@
 % Please edit documentation in R/Crop.R
 \name{Crop}
 \alias{Crop}
-\title{Title Crop}
+\title{Crop}
 \usage{
-Crop(input_path, output_path, height, width)
+Crop(img, height, width)
 }
 \arguments{
-\item{input_path}{----String, path of the input image}
-
-\item{output_path}{----String, path of the output image}
+\item{img}{}
 
 \item{height}{----Int, height of the desired image}
 
 \item{width}{----Int, width of the desired image}
 }
+\value{
+
+}
 \description{
-Title Crop
+Crop image to desired size
+}
+\examples{
+img <- array(runif(1000),dim=c(10,10,3))
+Crop(img, 8,8)
 }

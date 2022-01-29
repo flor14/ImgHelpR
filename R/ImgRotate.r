@@ -1,6 +1,4 @@
 library(jpeg)
-library(testthat)
-library(assertthat)
 
 #' Rotate an image 90, 180, 270, or 360 degrees counterclockwise.
 #'
