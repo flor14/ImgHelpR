@@ -7,14 +7,14 @@
 Crop(img, height, width)
 }
 \arguments{
-\item{img}{}
+\item{img}{----Array, input image array}
 
 \item{height}{----Int, height of the desired image}
 
 \item{width}{----Int, width of the desired image}
 }
 \value{
-
+The cropped image
 }
 \description{
 Crop image to desired size
