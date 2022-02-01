@@ -58,7 +58,7 @@ plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
 
 # crop image
-cropped_ubc <- Crop(ubc, 250, 250)
+cropped_ubc <- Crop(ubc, 300, 300)
 
 org_dim <- dim(ubc)
 crop_dim <- dim(cropped_ubc)
@@ -101,18 +101,30 @@ plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
 
 # convert to gray 
-red_ubc <- ColorConv(ubc,color = "green")
+green_ubc <- ColorConv(ubc,color = "green")
 
-# 
+# display green image
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
-rasterImage(red_ubc, 0,0,1,1)
+rasterImage(green_ubc, 0,0,1,1)
 
 ```
 
 ## Compress Images with ImgCompress()
 
+This function compress images to a user defined compression level. There are three inputs, `img`, `method`, and `level`. The `method` argument refers to the compression method, of which there are two options: `method = "resize"` or `method = "SVD"`. `resize` compresses via interval pixel selection method, while `SVD` compresses via singular value decomposition. `level` refers to the level of compression desired by the user, with level 1 = High, 2 =Med, and 3 = Low.
+
+The function returns an array, which can be read into `rasterImage` as shown in the **Data** section.
+
 ```{r}
 # display test image 
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
+
+# compress image 
+compress_ubc <- ImgCompress(ubc, method = "resize", level = 3)
+
+# display compressed image
+plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
+rasterImage(compress_ubc, 0,0,1,1)
+
 ```
