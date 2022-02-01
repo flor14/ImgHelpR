@@ -44,7 +44,7 @@ ImgHelpR is comprised of 4 main functions:
 
 -   `ImgRotate(img, degree)` This function rotates an image either 90, 180, 270, or 360 degrees from it's original orientation.
 
--   `ColorConv(img, color)` This function converts an image to a color specified by user-input.
+-   `ColorConv(img, color)` This function converts an image to a gray, red, green, or blue.
 
 -   `ImgCompress(img, method, level=1)` This function compresses an image to a user-defined compression level.
 
@@ -93,12 +93,19 @@ rasterImage(ubc_180, 0,0,1,1)
 
 ## Convert Images color with ColorConv()
 
+This function converts an image's color to gray, red, green, or blue. There are two inputs, `img` and color, that must be inputted by the user. The function returns an array, which can be read into `rasterImage` as shown in the **Data** section.
+
 ```{r}
 # display test image 
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
 
 # convert to gray 
+red_ubc <- ColorConv(ubc,color = "green")
+
+# 
+plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
+rasterImage(red_ubc, 0,0,1,1)
 
 ```
 
