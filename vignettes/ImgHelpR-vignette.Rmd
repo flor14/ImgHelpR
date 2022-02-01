@@ -16,4 +16,87 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(ImgHelpR)
+library (jpeg)
+```
+
+This document introduces you to ImgHelpR's functions and how to use them.
+
+ImgHelpR makes basic image manipulation easy in R. With ImgHelpR, beginners can easily crop, rotate, compress, or change the color scale of a given image
+
+## Data
+
+To explore basic image manipulation with ImgHelpR, a test image named `ubc.jpeg` has been provided. The JPEG image needs to be read in as an array; we recommend using via `jpeg::readJPEG('path')` . To display the image,
+
+```{r}
+# read image in via JPEG
+ubc <- jpeg::readJPEG('../test_img/ubc.jpeg')
+
+# display test image 
+plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
+rasterImage(ubc, 0,0,1,1)
+```
+
+## Functions
+
+ImgHelpR is comprised of 4 main functions:
+
+-   `Crop(img, width, height)` This function takes an image and the desired height/width as input, and returns a cropped image.
+
+-   `ImgRotate(img, degree)` This function rotates an image either 90, 180, 270, or 360 degrees from it's original orientation.
+
+-   `ColorConv(img, color)` This function converts an image to a color specified by user-input.
+
+-   `ImgCompress(img, method, level=1)` This function compresses an image to a user-defined compression level.
+
+## Crop Images with Crop()
+
+-   `Crop()` cuts an image's dimensions to a desired size. There are two inputs, `height` and `width` that must be inputted by the user. The function returns an array, which can be read into `rasterImage` as shown in the **Data** section.
+
+```{r}
+# display test image 
+plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
+rasterImage(ubc, 0,0,1,1)
+
+
+
+# crop image
+cropped_ubc <- Crop(ubc, 250, 250)
+
+org_dim <- dim(ubc)
+crop_dim <- dim(cropped_ubc)
+
+# display cropped image
+plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
+rasterImage(cropped_ubc, 0,0,1,1)
+
+# print current dimensions of test image
+print('Original dimensions: ') 
+org_dim
+print("Cropped dimensions: ")
+crop_dim
+```
+
+## Rotate Images with ImgRotate()
+
+```{r}
+# display test image 
+plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
+rasterImage(ubc, 0,0,1,1)
+
+```
+
+## Convert Images color with ColorConv()
+
+```{r}
+# display test image 
+plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
+rasterImage(ubc, 0,0,1,1)
+```
+
+## Compress Images with ImgCompress()
+
+```{r}
+# display test image 
+plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
+rasterImage(ubc, 0,0,1,1)
 ```
