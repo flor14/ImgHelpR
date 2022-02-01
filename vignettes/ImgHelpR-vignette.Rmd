@@ -50,14 +50,12 @@ ImgHelpR is comprised of 4 main functions:
 
 ## Crop Images with Crop()
 
--   `Crop()` cuts an image's dimensions to a desired size. There are two inputs, `height` and `width` that must be inputted by the user. The function returns an array, which can be read into `rasterImage` as shown in the **Data** section.
+-   `Crop()` cuts an image's dimensions to a desired size. There are three inputs, `img`, `height`, `width` that must be inputted by the user. The function returns an array, which can be read into `rasterImage` as shown in the **Data** section.
 
 ```{r}
 # display test image 
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
-
-
 
 # crop image
 cropped_ubc <- Crop(ubc, 250, 250)
@@ -78,11 +76,19 @@ crop_dim
 
 ## Rotate Images with ImgRotate()
 
+`ImgRotate()` rotates an image 90, 180, 270, or 360 degrees counterclockwise. There are two inputs, `img` and `degree`, that must be inputted by the user. The function returns an array, which can be read into `rasterImage` as shown in the **Data** section.
+
 ```{r}
 # display test image 
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
 
+# rotate image 
+ubc_180 <- ImgRotate(ubc, 180)
+
+# display rotated image
+plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
+rasterImage(ubc_180, 0,0,1,1)
 ```
 
 ## Convert Images color with ColorConv()
@@ -91,6 +97,9 @@ rasterImage(ubc, 0,0,1,1)
 # display test image 
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
+
+# convert to gray 
+
 ```
 
 ## Compress Images with ImgCompress()
