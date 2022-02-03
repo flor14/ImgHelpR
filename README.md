@@ -4,6 +4,10 @@
 # ImgHelpR
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/UBC-MDS/ImgHelpR/actions/workflows/check-standard.yaml/badge.svg?branch=main)](https://github.com/UBC-MDS/ImgHelpR/actions/workflows/check-standard.yaml)
+[![codecov](https://codecov.io/gh/UBC-MDS/ImgHelpR/branch/main/graph/badge.svg?token=7GGqxD2ZgW)](https://codecov.io/gh/UBC-MDS/ImgHelpR)
+
 <!-- badges: end -->
 
 The goal of ImgHelpR is a simple R package to help users crop, rotate,
