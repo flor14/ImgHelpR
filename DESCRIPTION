@@ -1,6 +1,6 @@
 Package: ImgHelpR
 Title: Tools to Help Process Image in R
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: 
     c(person(given = "Sufang",
              family = "Tan",

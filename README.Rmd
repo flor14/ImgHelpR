@@ -16,6 +16,10 @@ knitr::opts_chunk$set(
 # ImgHelpR
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/UBC-MDS/ImgHelpR/actions/workflows/check-standard.yaml/badge.svg?branch=main)](https://github.com/UBC-MDS/ImgHelpR/actions/workflows/check-standard.yaml)
+[![codecov](https://codecov.io/gh/UBC-MDS/ImgHelpR/branch/main/graph/badge.svg?token=7GGqxD2ZgW)](https://codecov.io/gh/UBC-MDS/ImgHelpR)
+
 <!-- badges: end -->
 
 The goal of ImgHelpR is a simple R package to help users crop, rotate, compress, or change the color scale of a given image. It contains four functions: `Crop()`, `ImgRotate()`, `ColorConv()` and `ImgCompress()` and is designed to be a beginner-friendly image processing tool.

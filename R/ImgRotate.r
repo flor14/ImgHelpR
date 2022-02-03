@@ -26,7 +26,7 @@ ImgRotate <- function(img, degree){
       }
     
     if (!(degree %in% c(90, 180, 270, 360))) {
-    print("Invalid degree. Can only rotate images 90, 180, 270, or 360 degrees!")
+    stop("Invalid degree. Can only rotate images 90, 180, 270, or 360 degrees!")
     }
 
     # make copy of image
