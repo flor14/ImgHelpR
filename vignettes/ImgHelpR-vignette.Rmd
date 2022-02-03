@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(ImgHelpR)
-library (jpeg)
 ```
 
 This document introduces you to ImgHelpR's functions and how to use them.
