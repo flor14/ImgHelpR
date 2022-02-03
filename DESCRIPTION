@@ -26,7 +26,12 @@ Imports:
     jpeg (>= 0.1.9),
     R.utils,
     testthat
+Suggests:
+	rmarkdown,
+	knitr,
+	qpdf
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+VignetteBuilder: knitr
