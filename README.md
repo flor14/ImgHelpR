@@ -18,16 +18,14 @@ and is designed to be a beginner-friendly image processing tool.
 ## Installation
 
 ``` r
-install.packages("ImgHelpR")
+devtools::install_github("UBC-MDS/ImgHelpR")
 ```
 
-    ## Usage
+## Usage
 
-
-
-    ```r
-    library(ImgHelpR)
-    ## basic example code
+``` r
+library(ImgHelpR)
+```
 
 ## Features
 
