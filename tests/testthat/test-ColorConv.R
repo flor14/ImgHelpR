@@ -1,3 +1,4 @@
+library(testthat)
 test_that("Error should be thrown when input is not array type", {
   expect_error(ColorConv(c(1,2,3),color="red"))
 })
