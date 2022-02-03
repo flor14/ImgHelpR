@@ -1,3 +1,4 @@
+library(testthat)
 # should be array
 test_that("Error should be thrown when input is not array type", {
   expect_error(ImgRotate(c(1,2,3), 180))
