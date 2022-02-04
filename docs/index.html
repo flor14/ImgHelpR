@@ -26,7 +26,7 @@
     
     <a class="navbar-brand me-2" href="index.html">ImgHelpR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,21 +67,20 @@
 <div class="page-header"><h1 id="imghelpr">ImgHelpR<a class="anchor" aria-label="anchor" href="#imghelpr"></a>
 </h1></div>
 <!-- badges: start -->
-<!-- badges: end -->
-<!-- badges: start -->
+
 <!-- badges: end -->
 <p>The goal of ImgHelpR is a simple R package to help users crop, rotate, compress, or change the color scale of a given image. It contains four functions: <code><a href="reference/Crop.html">Crop()</a></code>, <code><a href="reference/ImgRotate.html">ImgRotate()</a></code>, <code><a href="reference/ColorConv.html">ColorConv()</a></code> and <code><a href="reference/ImgCompress.html">ImgCompress()</a></code> and is designed to be a beginner-friendly image processing tool.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/" class="external-link">devtools</a></span><span class="op">)</span>
-<span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"UBC-MDS/ImgHelpR"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"UBC-MDS/ImgHelpR"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
 </h2>
-<p><code>{r example} library(ImgHelpR)</code></p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/UBC-MDS/ImgHelpR" class="external-link">ImgHelpR</a></span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="features">Features<a class="anchor" aria-label="anchor" href="#features"></a>
@@ -102,7 +101,7 @@
 <div class="section level2">
 <h2 id="contributors">Contributors<a class="anchor" aria-label="anchor" href="#contributors"></a>
 </h2>
-<p>The following people contributed to the creation of ImgHelp: - Sufang Tan <a href="https://github.com/Kendy-Tan" class="external-link">@Kendy-Tan</a> - Jasmine Ortega <a href="https://github.com/jasmineortega" class="external-link">@JasmineOrtega</a> - Ho Kwan Lio <a href="https://github.com/stevenlio88" class="external-link">@stevenlio88</a> - Maeve Shi <a href="https://github.com/MaeveShi" class="external-link">@MaeveShi</a></p>
+<p>The following people contributed to the creation of ImgHelp: - Sufang Tan [@Kendy-Tan](<a href="https://github.com/Kendy-Tan" class="external-link uri">https://github.com/Kendy-Tan</a>) - Jasmine Ortega [@JasmineOrtega](<a href="https://github.com/jasmineortega" class="external-link uri">https://github.com/jasmineortega</a>) - Ho Kwan Lio [@stevenlio88](<a href="https://github.com/stevenlio88" class="external-link uri">https://github.com/stevenlio88</a>) - Maeve Shi [@MaeveShi](<a href="https://github.com/MaeveShi" class="external-link uri">https://github.com/MaeveShi</a>)</p>
 </div>
 <div class="section level2">
 <h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
@@ -151,7 +150,13 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/UBC-MDS/ImgHelpR/actions/workflows/check-standard.yaml" class="external-link"><img src="https://github.com/UBC-MDS/ImgHelpR/actions/workflows/check-standard.yaml/badge.svg?branch=main" alt="R-CMD-check"></a></li>
+<li><a href="https://codecov.io/gh/UBC-MDS/ImgHelpR" class="external-link"><img src="https://codecov.io/gh/UBC-MDS/ImgHelpR/branch/main/graph/badge.svg?token=7GGqxD2ZgW" alt="codecov"></a></li>
+</ul>
+</div>
 
   </aside>
 </div>
